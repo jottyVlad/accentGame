@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Игра в ударения</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="container d-flex justify-content-center mt-3">
+        <h2>Игра в ударения</h2>
+    </header>
+    <main class="container d-flex justify-content-center mt-5">
+
+        <div id="timer">Таймер:&nbsp;<span id="timer-time">0s</span></div>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="viewInstructions">
+            Посмотреть инструкцию и начать играть!
+        </button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Инструкция</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        На экране будут появляться слова. <br/>
+                        Тебе просто нужно нажать на ту гласную, на которую, по твоему мнению, падает ударение. <br/>
+                        Далее нажимай "Продолжить". Если нажмешь "Продолжить", не выбрав букву, слово переключится на
+                        следующее, а балл не засчитается. <br/>
+                        Удачи!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal" id="startPlay">Играть!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="word"></div>
+        <div id="scores">Количество очков:&nbsp;<span id="scores-num"></span></div>
+        <button type="button" class="btn btn-success" style="display:none;" id="continue">Продолжить</button>
+
+    </main>
+    <footer class="container d-flex justify-content-center mb-2">
+        &#169;2022 Jotty
+    </footer>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>

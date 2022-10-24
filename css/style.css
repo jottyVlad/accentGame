@@ -1,0 +1,43 @@
+footer {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+main {
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+
+.word {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 0 10px;
+}
+
+.word > button {
+    font-size: 30px;
+    background: white;
+    border: #f5cdcd solid 2px;
+    transition: 0.5s;
+}
+
+#scores {
+    display: none;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.word > button:hover {
+    font-size: 35px;
+    border: #0c63e4 solid 2px;
+}
+
+#timer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-size: 25px;
+}
