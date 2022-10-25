@@ -63,7 +63,7 @@ main {
     font-size: 25px;
 }
 
-#timer > * {
+#timer-time {
     padding: 0;
     width: auto;
 }
