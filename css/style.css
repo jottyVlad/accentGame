@@ -38,6 +38,11 @@ main {
     font-size: 25px;
 }
 
+#scores-num {
+    width: auto;
+    padding: 0;
+}
+
 .word > button:hover {
     font-size: 35px;
     border: #0c63e4 solid 2px;
