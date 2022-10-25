@@ -1,6 +1,12 @@
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
 footer {
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin-top: 15px!important;
+    margin-bottom: 10px!important;
+    width: 100%;
 }
 
 main {
@@ -11,15 +17,17 @@ main {
 .word {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-    gap: 0 10px;
+    margin-bottom: 20px !important;
+    gap: 0 7px;
 }
 
 .word > button {
-    font-size: 30px;
+    font-size: 140%;
     background: white;
     border: #f5cdcd solid 2px;
     transition: 0.5s;
+
+    border-radius: 5px;
 }
 
 #scores {
@@ -35,9 +43,36 @@ main {
     border: #0c63e4 solid 2px;
 }
 
+.word > * {
+    width: auto;
+}
+
+.row {
+    margin: 0;
+}
+
 #timer {
     display: flex;
     justify-content: center;
     margin-bottom: 25px;
     font-size: 25px;
+}
+
+#timer > * {
+    padding: 0;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .word {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px !important;
+        gap: 0 2px;
+    }
+
+    .word > button {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
 }
