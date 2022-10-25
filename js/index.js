@@ -13,6 +13,7 @@ Array.prototype.random = function () {
 
 let vowels = 'аяуюоеёэиы';
 let wordsArray = readTextFile('./files/words.txt').split('\n');
+let wordsAlreadyWere = [];
 let scores = 0;
 let words = 0;
 
@@ -80,6 +81,7 @@ function prepareWordElement(word) {
 
         letterButton.addEventListener("click", processLetterClick);
     }
+    wordsAlreadyWere.push(word);
 }
 
 function readTextFile(file)
@@ -110,7 +112,7 @@ startPlayButton.addEventListener("click", () => {
 })
 
 continueButton.addEventListener("click", () => {
-    if (words > 20) {
+    if (words > 19) {
         clearTimeout(timeout);
         continueButton.removeEventListener("click", this);
         scoresSpan.textContent = Math.round(scores * 1000 / secs).toString();
@@ -118,7 +120,7 @@ continueButton.addEventListener("click", () => {
         return
     }
     let newWord = wordsArray.random();
-    while(newWord === currentWord) {
+    while(wordsAlreadyWere.includes(newWord)) {
         newWord = wordsArray.random();
     }
     currentWord = newWord;
